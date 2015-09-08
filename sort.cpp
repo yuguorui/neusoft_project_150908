@@ -4,7 +4,12 @@
 
 int cmp(const void *a, const void *b)
 {
-	return (long long)(((Road*)a)->roadNO) - (long long)(((Road*)b)->roadNO);
+	//return (long long)(((Road*)a)->roadNO) > (long long)(((Road*)b)->roadNO) ? 1 : 0;
+	unsigned long long a_ = (unsigned long long)((Road*)a)->roadNO;
+	unsigned long long b_ = (unsigned long long)((Road*)b)->roadNO;
+	if (a_ > b_) return 1;
+	if (a_ > b_) return 0;
+	else return -1;
 }
 
 long quickSort(Road *roads)

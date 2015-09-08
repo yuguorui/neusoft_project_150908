@@ -6,7 +6,7 @@ typedef struct Road
 {
 	unsigned short lenth;
 	unsigned long long roadNO;
-	unsigned short sizeOfName;
+	int sizeOfName;
 	unsigned otherinfo;
 	bool flag;
 	unsigned brunch;
