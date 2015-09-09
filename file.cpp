@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 #include <stdlib.h>
 #include "header.h"
 
@@ -27,7 +26,8 @@ void readSingle(FILE *fp, Road *road)
 	memset(buf, 0, sizeof(buf));
 	fread(buf, 1, 2, fp);
 	memcpy(&(road->data[6]), buf, 2);
-	road->sizeOfName = buf[1] + buf[0] * (1 << 8);
+	//road->sizeOfName = buf[1] + buf[0] * (1 << 8);
+	road->sizeOfName =  road->lenth - 12;
 
 	memset(buf, 0, sizeof(buf));
 	fread(buf, 1, 4, fp);
@@ -61,7 +61,7 @@ bool writeFile(Road *roads, char * des)
 {
 	int i = 0;
 	FILE *fp = fopen(des, "wb");
-	if (fp == nullptr)
+	if (fp == NULL)
 		return false;
 	while (roads[i].lenth != 0)
 	{

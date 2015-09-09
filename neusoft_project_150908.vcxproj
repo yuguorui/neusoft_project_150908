@@ -90,7 +90,9 @@
     <ClCompile Include="file.cpp" />
     <ClCompile Include="gui.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="search.cpp" />
     <ClCompile Include="sort.cpp" />
+    <ClCompile Include="update.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header.h" />
