@@ -16,7 +16,7 @@ void printTips()
 void displaySingle(Road *road)
 {
 	//记录大小，linkid，道路名称size，有无flag，岔路数，分类编号，道路名称
-	printf("道路编号: %lld  ", road->roadNO);
+	printf("道路编号: %llu  ", road->roadNO);
 	if(road->flag)
 	{
 		printf("道路名称: %s", road->roadName);
